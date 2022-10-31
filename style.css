@@ -315,6 +315,10 @@ ul {
   top: 2em;
 }
 
+.faq h3 a {
+  text-decoration: none;
+}
+
 .team ul {
   display: flex;
   flex-wrap: wrap;
@@ -340,8 +344,12 @@ ul {
 .press li {
   border: 1px solid var(--main-text-color);
   width: 49%;
-  padding: 2em;
   margin-bottom: 0.5em;
+}
+
+.press a {
+  display: block;
+  padding: 2em;
 }
 
 footer .wrapper {
