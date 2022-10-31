@@ -73,6 +73,11 @@ select {
   }
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --main-bg-color: #498268;
   --main-text-color: #000000;
@@ -183,12 +188,6 @@ nav a {
   }
 }
 
-h1,
-h2,
-h3,
-h4 {
-}
-
 h1 {
   text-transform: uppercase;
   font-size: 3em;
@@ -238,8 +237,8 @@ p {
   background-color: var(--main-text-color);
   text-decoration: none;
   display: block;
-  padding: 2em;
-  font-size: 1.5em;
+  padding: 1.365em 2em;
+  font-size: 1.375em;
   text-align: center;
   text-transform: uppercase;
   border-radius: 4em;
@@ -305,6 +304,10 @@ ul {
   text-align: center;
 }
 
+.faq h3 {
+  font-size: 2.625em;
+}
+
 .faq .tbl,
 .faq .tbr {
   bottom: 2em;
@@ -332,6 +335,7 @@ ul {
 .team h5 {
   text-transform: uppercase;
   font-weight: 400;
+  font-size: 1em;
   margin: 0;
 }
 
@@ -352,6 +356,10 @@ ul {
   padding: 2em;
 }
 
+.press img {
+  margin: 0 auto;
+}
+
 footer .wrapper {
   border-bottom: 0;
   display: flex;
@@ -362,6 +370,13 @@ footer .logo {
   display: inline-block;
   position: relative;
   top: 4px;
+}
+
+@media screen and (min-width: 600px) {
+  footer .logo {
+    height: 30px;
+    top: 7px;
+  }
 }
 
 footer .copy {
