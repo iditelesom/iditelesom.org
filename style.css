@@ -1,0 +1,368 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:root {
+  --main-bg-color: #498268;
+  --main-text-color: #000000;
+}
+
+body {
+  color: var(--main-text-color);
+  font-size: 16px;
+  font-family: "Arial", sans-serif;
+  background: url("bg.png") repeat-x center bottom var(--main-bg-color);
+  padding-bottom: 35em;
+}
+
+.wrapper {
+  border-bottom: 1px solid var(--main-text-color);
+  padding-bottom: 2em;
+  position: relative;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  max-width: 600px;
+}
+
+.ttl {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.ttr {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tbl {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.tbr {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.5em;
+    padding-bottom: 25em;
+  }
+  .wrapper {
+    margin: 0 auto;
+  }
+}
+
+header .links {
+  text-align: center;
+  padding-top: 1em;
+}
+
+header .link {
+  display: inline-block;
+  text-align: left;
+  text-transform: uppercase;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  line-height: 1;
+  font-size: 0.75em;
+}
+
+header .link:first {
+  margin-left: 0;
+}
+
+header .logo {
+  width: 100%;
+}
+
+header .wrapper {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+header .tbl,
+header .tbr {
+  bottom: 1em;
+}
+
+a {
+  color: var(--main-text-color);
+}
+
+nav {
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 2em;
+  margin-bottom: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+  header nav {
+    margin-bottom: 2em;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 3.25em;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75em;
+}
+
+.subheader {
+  text-align: center;
+}
+
+.subheader h2 {
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+  margin-top: 0.75em;
+}
+
+.subheader h2 + p {
+  font-size: 1.5em;
+  margin: 0.75em;
+}
+
+.button {
+  color: var(--main-bg-color);
+  background-color: var(--main-text-color);
+  text-decoration: none;
+  display: block;
+  padding: 2em;
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4em;
+  line-height: 1.1;
+  margin-bottom: 0.5em;
+}
+
+.button + p {
+  font-size: 0.75em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.about h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 1.75em;
+  margin: 0.75rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.help ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: -2em;
+}
+
+.help li {
+  border-top: 1px solid var(--main-text-color);
+  width: 49%;
+  padding-top: 0.425em;
+  overflow-wrap: break-word;
+}
+
+.help h5 {
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 0.75em;
+}
+
+.help li p {
+  font-size: 0.875em;
+}
+
+.faq .wrapper {
+  padding: 5rem 0;
+}
+
+.faq .content {
+  border: 1px solid var(--main-text-color);
+  border-radius: 7em;
+  padding: 1.5rem 4em;
+  text-align: center;
+}
+
+.faq .tbl,
+.faq .tbr {
+  bottom: 2em;
+}
+
+.faq .ttl,
+.faq .ttr {
+  top: 2em;
+}
+
+.team ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team li {
+  width: 49%;
+}
+
+.team h5 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+}
+
+.press ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.press li {
+  border: 1px solid var(--main-text-color);
+  width: 49%;
+  padding: 2em;
+  margin-bottom: 0.5em;
+}
+
+footer .wrapper {
+  border-bottom: 0;
+  display: flex;
+  padding-top: 0.25em;
+}
+
+footer .logo {
+  display: inline-block;
+  position: relative;
+  top: 4px;
+}
+
+footer .copy {
+  flex: 1;
+}
+
+footer .link {
+  text-transform: uppercase;
+  margin-left: 2em;
+  line-height: 1;
+  font-size: 0.75em;
+}
