@@ -79,16 +79,16 @@ select {
 }
 
 :root {
-  --main-bg-color: #498268;
+  --main-bg-color: #ffffff;
   --main-text-color: #000000;
+  --button-bg-color: #498268;
 }
 
 body {
   color: var(--main-text-color);
   font-size: 16px;
   font-family: "Arial", sans-serif;
-  background: url("bg.png") repeat-x center bottom var(--main-bg-color);
-  padding-bottom: 35em;
+  background: var(--main-bg-color);
 }
 
 .wrapper {
@@ -127,7 +127,6 @@ body {
 @media screen and (min-width: 600px) {
   body {
     font-size: 1.5em;
-    padding-bottom: 25em;
   }
   .wrapper {
     margin: 0 auto;
@@ -234,7 +233,7 @@ p {
 
 .button {
   color: var(--main-bg-color);
-  background-color: var(--main-text-color);
+  background-color: var(--button-bg-color);
   text-decoration: none;
   display: block;
   padding: 1.365em 2em;
