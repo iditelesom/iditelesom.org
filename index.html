@@ -5,7 +5,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2J0PZTEMF"></script>
     <script>
       const language = navigator.language || navigator.browserLanguage; //for IE
-      if (language.indexOf('ru') === -1) {
+      const hostname = window.location.hostname;
+      const referrer = document.referrer;
+
+      const isFirstVisit = referrer.indexOf(hostname) === -1;
+      const isRuLanguage = language.indexOf('ru') > -1
+      
+      if (isFirstVisit && !isRuLanguage) {
         document.location.href = '/en';
       }
     </script>
